@@ -26,7 +26,16 @@ This module is API compatible with the Stream that ships by default with Node.js
 - Uses [`@foxify/events`](https://github.com/foxifyjs/events) as the EventEmitter.
 - The `emitClose` option is not available.
 
-## Table of Contents <!-- omit in toc -->## Installation
+## Table of Contents <!-- omit in toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Benchmarks](#benchmarks)
+- [Versioning](#versioning)
+- [Authors](#authors)
+- [License](#license)
+
+## Installation
 
 ```bash
 npm i @foxify/events
