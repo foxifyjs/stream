@@ -1,0 +1,62 @@
+{
+  "name": "@foxify/stream",
+  "version": "1.0.0",
+  "description": "A high performance Stream alternative for Node.js and browser",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run build && npm test",
+    "build": "tsc",
+    "watch": "npm run build -- --watch",
+    "lint": "tslint -p tsconfig.json -c tslint.json --exclude '**/*.d.ts'",
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
+    "codecov": "npm run build && npm run coverage -- --runInBand && codecov",
+    "benchmarks": "find benchmarks -name '*.js' -exec benchmarks/start.sh {} \\;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/foxifyjs/stream.git"
+  },
+  "keywords": [
+    "readable",
+    "writable",
+    "duplex",
+    "stream",
+    "read",
+    "write",
+    "pipe"
+  ],
+  "author": "Ardalan Amini <ardalanamini22@gmail.com> (https://ardalanamini.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foxifyjs/stream/issues"
+  },
+  "homepage": "https://github.com/foxifyjs/stream#readme",
+  "dependencies": {
+    "@foxify/events": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "benchmark": "^2.1.4",
+    "codecov": "^3.5.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "node"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/tests/**/*\\.ts"
+    ]
+  }
+}
