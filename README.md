@@ -38,13 +38,13 @@ This module is API compatible with the Stream that ships by default with Node.js
 ## Installation
 
 ```bash
-npm i @foxify/events
+npm i @foxify/stream
 ```
 
 ## Usage
 
 ```js
-const { EventEmitter } = require("@foxify/events");
+const { Readable, Writable, Duplex } = require("@foxify/stream");
 ```
 
 For the API documentation, please follow the official Node.js [documentation](https://nodejs.org/api/stream.html).
